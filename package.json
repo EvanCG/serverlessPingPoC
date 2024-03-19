@@ -1,0 +1,19 @@
+{
+  "name": "serverlesspingpoc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log('No testing yet')"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvanCG/serverlessPingPoC.git"
+  },
+  "author": "Evan Griffith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EvanCG/serverlessPingPoC/issues"
+  },
+  "homepage": "https://github.com/EvanCG/serverlessPingPoC#readme"
+}
