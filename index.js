@@ -1,5 +1,11 @@
+// Imports
+const schedule = require('node-schedule');
+const { Pool } = require('pg');
+require('dotenv').config()
+
 // establish connection to the database
 
+console.log('The secret is: ', process.env.TEST_SECRET);
 
 /**
  * 

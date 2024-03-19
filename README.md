@@ -1,7 +1,7 @@
 # serverlessPingPoC
 Proof of Concept of Serverless Ping Project
 
-###Minimum Proof of Concept this Works:
+### Minimum Proof of Concept this Works:
 
 1. Spin up an Serverless function that responds
 with current time and some indication if this was
