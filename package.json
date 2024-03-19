@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "console.log('No testing yet')"
   },
   "repository": {
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/EvanCG/serverlessPingPoC/issues"
   },
-  "homepage": "https://github.com/EvanCG/serverlessPingPoC#readme"
+  "homepage": "https://github.com/EvanCG/serverlessPingPoC#readme",
+  "dependencies": {
+    "node-schedule": "^2.1.1",
+    "pg": "^8.11.3"
+  }
 }
