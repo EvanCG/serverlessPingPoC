@@ -61,7 +61,6 @@ const callAndLog = async (endpoint, invokeTime) => {
         invokeTime
       ).toString()}`
     );
-
   } catch (err) {
     console.log('Hit an error: ', err);
   }
@@ -113,28 +112,32 @@ const endpoint3H = {
   name: '8. Every 3 Hour',
 };
 
-/* Run the jobs */
-const job10S = schedule.scheduleJob('*/10 * * * * *', () =>
-  callAndLog(endpoint10S, Date.now())
-);
-const job1M = schedule.scheduleJob('0 */1 * * * *', () =>
-  callAndLog(endpoint1M, Date.now())
-);
-const job5M = schedule.scheduleJob('0 */5 * * * *', () =>
-  callAndLog(endpoint5M, Date.now())
-);
-const job15M = schedule.scheduleJob('0 */15 * * * *', () =>
-  callAndLog(endpoint15M, Date.now())
-);
-const job30M = schedule.scheduleJob('0 */30 * * * *', () =>
-  callAndLog(endpoint30M, Date.now())
-);
-const job1H = schedule.scheduleJob('0 0 */1 * * *', () =>
-  callAndLog(endpoint1H, Date.now())
-);
-const job2H = schedule.scheduleJob('0 0 */2 * * *', () =>
-  callAndLog(endpoint2H, Date.now())
-);
-const job3H = schedule.scheduleJob('0 0 */3 * * *', () =>
-  callAndLog(endpoint3H, Date.now())
-);
+const initializeJobs = () => {
+  /* Run the jobs */
+  const job10S = schedule.scheduleJob('*/10 * * * * *', () =>
+    callAndLog(endpoint10S, Date.now())
+  );
+  const job1M = schedule.scheduleJob('0 */1 * * * *', () =>
+    callAndLog(endpoint1M, Date.now())
+  );
+  const job5M = schedule.scheduleJob('0 */5 * * * *', () =>
+    callAndLog(endpoint5M, Date.now())
+  );
+  const job15M = schedule.scheduleJob('0 */15 * * * *', () =>
+    callAndLog(endpoint15M, Date.now())
+  );
+  const job30M = schedule.scheduleJob('0 */30 * * * *', () =>
+    callAndLog(endpoint30M, Date.now())
+  );
+  const job1H = schedule.scheduleJob('0 0 */1 * * *', () =>
+    callAndLog(endpoint1H, Date.now())
+  );
+  const job2H = schedule.scheduleJob('0 0 */2 * * *', () =>
+    callAndLog(endpoint2H, Date.now())
+  );
+  const job3H = schedule.scheduleJob('0 0 */3 * * *', () =>
+    callAndLog(endpoint3H, Date.now())
+  );
+};
+
+module.exports = initializeJobs;
